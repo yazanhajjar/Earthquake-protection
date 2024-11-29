@@ -53,8 +53,8 @@ class Resultscreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.all(Radius.circular(30)),
                       color: e['index'] % 2 == 0
-                          ? const Color.fromARGB(255, 113, 113, 113)
-                          : const Color.fromARGB(255, 5, 4, 4),
+                          ? Theme.of(context).colorScheme.onPrimaryFixedVariant
+                          :  Theme.of(context).colorScheme.onPrimaryFixed,
                     ),
                     margin: const EdgeInsets.all(10),
                     padding: const EdgeInsets.all(10),

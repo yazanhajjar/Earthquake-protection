@@ -29,7 +29,8 @@ class _QuizscreenState extends State<Quizscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Theme.of(context).colorScheme.secondaryFixedDim,
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.secondaryFixedDim,
         title: Title(
             color: Theme.of(context).colorScheme.secondaryFixedDim,
             child: Text(
@@ -47,8 +48,10 @@ class _QuizscreenState extends State<Quizscreen> {
           children: [
             Text(
               currentQuestion,
-              style: const TextStyle(fontWeight: FontWeight.bold,
-                  fontSize: 25, color: Color.fromARGB(255, 43, 6, 6)),
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  color: Color.fromARGB(255, 43, 6, 6)),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
@@ -75,10 +78,10 @@ class _QuizscreenState extends State<Quizscreen> {
                           });
                         },
                         style: const ButtonStyle(
-                          backgroundColor: WidgetStatePropertyAll(
-                              Color.fromARGB(255, 50, 41, 41)),
-                              padding: WidgetStatePropertyAll(EdgeInsets.all(20))
-                        ),
+                            backgroundColor: WidgetStatePropertyAll(
+                                Color.fromARGB(255, 50, 41, 41)),
+                            padding:
+                                WidgetStatePropertyAll(EdgeInsets.all(20))),
                         child: Text(
                           e,
                           style: const TextStyle(

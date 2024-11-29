@@ -11,18 +11,22 @@ class EducationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(margin: const EdgeInsets.fromLTRB(1,10,1,10),
+    return Container(
+      margin: const EdgeInsets.fromLTRB(1, 10, 1, 10),
       child: GridView(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,childAspectRatio: 2.5/2
-        ),
+            crossAxisCount: 2, childAspectRatio: 2.5 / 2),
         children: const [
-          MyContainer(title: 'الوقاية من الزلزال',screen: EarthquakeEducation(),),
-          MyContainer(title: 'اختبار الوقاية من الزلزال',screen: Earthquakequiz()),
-          MyContainer(title: 'الوقاية من الحرائق',screen: FireEducation()),
-          MyContainer(title: 'اختبار الوقاية من الحرائق',screen: Firequiz()),
-          MyContainer(title: 'الإسعافات الأولية',screen: Medicaleducation()),
-          MyContainer(title: 'إختبار عن الإسعافات الأولية',screen: Medicalquiz())
+          MyContainer(
+            title: 'Earthquake Prevention',
+            screen: EarthquakeEducation(),
+          ),
+          MyContainer(
+              title: 'Earthquake Prevention quiz', screen: Earthquakequiz()),
+          MyContainer(title: 'Fire prevention', screen: FireEducation()),
+          MyContainer(title: 'Fire prevention quiz', screen: Firequiz()),
+          MyContainer(title: 'First aid', screen: Medicaleducation()),
+          MyContainer(title: 'First aid quiz', screen: Medicalquiz())
         ],
       ),
     );
@@ -30,7 +34,7 @@ class EducationScreen extends StatelessWidget {
 }
 
 class MyContainer extends StatelessWidget {
-  const MyContainer({super.key, required this.title,required this.screen});
+  const MyContainer({super.key, required this.title, required this.screen});
   final String title;
   final Widget screen;
 
@@ -38,8 +42,7 @@ class MyContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (ctx) => screen));
+        Navigator.push(context, MaterialPageRoute(builder: (ctx) => screen));
       },
       child: Container(
         decoration: BoxDecoration(
@@ -50,7 +53,11 @@ class MyContainer extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),textAlign: TextAlign.center,
           ),
         ),
       ),

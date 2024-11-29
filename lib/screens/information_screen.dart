@@ -23,11 +23,11 @@ class _InformationScreenState extends State<InformationScreen> {
       backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(
         title: Text(
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           widget.title,
           textAlign: TextAlign.center,
         ),
-        backgroundColor: Theme.of(context).colorScheme.primaryFixedDim,
+        backgroundColor: Theme.of(context).colorScheme.secondaryFixedDim,
       ),
       body: SingleChildScrollView(
         child: Column(
